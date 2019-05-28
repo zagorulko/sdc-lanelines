@@ -99,7 +99,6 @@ class LaneLineParamTuner:
 
     def _get_level_output(self):
         x = cv2.cvtColor(self.img, cv2.COLOR_RGB2GRAY)
-        x = cv2.equalizeHist(x)
 
         d = self.params['blur']
         x = cv2.GaussianBlur(x, (d['ksize'], d['ksize']), sigmaX=0, sigmaY=0)
